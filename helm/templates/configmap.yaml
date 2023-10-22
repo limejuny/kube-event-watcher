@@ -9,4 +9,4 @@ metadata:
     prometheus.io/scrape: {{ .Values.prometheus.scrape | quote }}
     prometheus.io/port: {{ .Values.prometheus.port | quote }}
 data:
-  config.yaml: {{ .Values.configYaml | nindent 4 }}
+  config.yaml: |{{ .Values.configYaml | nindent 4 }}
